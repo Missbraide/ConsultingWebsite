@@ -1,16 +1,333 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalyst Consulting | Small Business Solutions</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
-
 <body>
-  Hello world
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo">Catalyst<span>Consulting</span></a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#gallery">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Growth Solutions for Small Businesses</h1>
+        <p>We help small businesses streamline processes, build brands, and grow online presence with tailored consulting services.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn">Get Started</a>
+          <a href="#services" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <!-- Direct image tag approach -->
+    <div class="hero-image-container">
+      <img src="/assets/hero image.jpg" alt="Business consulting" class="hero-background-image">
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <!-- Updated Services Section with 6 Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="service-title">Website Creation</h3>
+          <p>Custom websites designed to engage visitors and drive conversions for your small business.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="service-title">Process Automation</h3>
+          <p>Streamline your operations with smart tools and systems to save time and reduce costs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 class="service-title">Brand Identity</h3>
+          <p>Develop a consistent and compelling brand that resonates with your target audience.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="service-title">Growth Optimization</h3>
+          <p>Improve your workflows, marketing strategies, and online presence for sustainable growth.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3 class="service-title">Product Management</h3>
+          <p>Strategic planning, development, and optimization of your products to maximize market success.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <h3 class="service-title">Social Media Management</h3>
+          <p>Comprehensive social media strategy, content creation, and engagement to build your online community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Banner Section -->
+  <section class="video-banner">
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="/assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-overlay"></div>
+    <div class="container">
+      <div class="video-content">
+        <h2>Transform Your Business</h2>
+        <p>Watch how our consulting services have helped small businesses achieve their growth goals.</p>
+        <a href="#contact" class="btn">Start Your Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process">
+    <div class="container">
+      <h2>Our Process</h2>
+      <div class="process-container">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Discovery</h3>
+          <p>We learn about your business goals, challenges, and opportunities.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Strategy</h3>
+          <p>We develop a customized plan tailored to your specific needs.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Implementation</h3>
+          <p>We execute the plan with precision and attention to detail.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Growth</h3>
+          <p>We measure results and refine strategies for ongoing success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>Client Success Stories</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Catalyst Consulting transformed our online presence and streamlined our booking process. Our revenue has increased by 40% since implementing their strategies."</p>
+              <div class="testimonial-author">
+                <div class="author-image" style="background-image: url('/assets/sarah-johnson.jpg');"></div>
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>Bloom Boutique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Their process automation solutions saved us countless hours each week. Now we can focus on what matters most - serving our customers."</p>
+              <div class="testimonial-author">
+                <div class="author-image" style="background-image: url('/assets/michael-rodriquez.jpg');"></div>
+                <div class="author-info">
+                  <h4>Michael Rodriguez</h4>
+                  <p>Coastal Kitchen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"The brand identity work they did for us completely changed how our clients perceive us. We're now seen as the premium option in our market."</p>
+              <div class="testimonial-author">
+                <div class="author-image" style="background-image: url('/assets/emma-chen.jpg');"></div>
+                <div class="author-info">
+                  <h4>Emma Chen</h4>
+                  <p>Wellness Collective</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="control-btn prev-btn">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="control-btn next-btn">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="carousel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery Section -->
+  <section id="gallery" class="image-gallery">
+    <div class="container">
+      <h2>Our Recent Projects</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="/assets/website.jpg" alt="E-commerce website design" class="gallery-img">
+          <div class="gallery-overlay">
+            <h3>E-commerce Redesign</h3>
+            <p>Increased conversions by 35%</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/design.jpg" alt="Brand identity project" class="gallery-img">
+          <div class="gallery-overlay">
+            <h3>Brand Refresh</h3>
+            <p>Created cohesive identity system</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/workflow_automation.jpg" alt="Marketing automation" class="gallery-img">
+          <div class="gallery-overlay">
+            <h3>Workflow Automation</h3>
+            <p>Saved 20+ hours per week</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Start a Conversation</h3>
+          <p>Ready to transform your small business? Contact us today for a free consultation and discover how we can help you achieve your goals.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p>Seattle, WA</p>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <p>(555) 123-4567</p>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <p>hello@catalystconsulting.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>About Us</h3>
+          <p>Catalyst Consulting helps small businesses thrive through strategic solutions, digital transformation, and creative branding.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Website Creation</a></li>
+            <li><a href="#">Process Automation</a></li>
+            <li><a href="#">Brand Identity</a></li>
+            <li><a href="#">Growth Optimization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for the latest small business tips and insights.</p>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Catalyst Consulting. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
-
 </html>
