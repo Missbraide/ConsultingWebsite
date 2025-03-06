@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Catalyst Consulting</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo {
+      color: var(--primary);
+    }
+
+    .navbar .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links a {
+      color: var(--primary);
+    }
+
+    .mobile-menu-btn .bar {
+      background-color: var(--primary);
+    }
+
+    /* Additional styles specific to the pricing page */
+    .pricing-hero {
+      background-color: var(--primary);
+      color: white;
+      padding: 8rem 0 4rem;
+      text-align: center;
+    }
+
+    .pricing-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .pricing-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .pricing-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .pricing-header {
+      text-align: center;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .pricing-price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .pricing-duration {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .pricing-features {
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .pricing-feature {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-feature i {
+      color: var(--accent);
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .pricing-feature-text {
+      flex: 1;
+    }
+
+    .pricing-btn {
+      align-self: center;
+      margin-top: auto;
+    }
+
+    .faq-section {
+      background-color: var(--light);
+      padding: 4rem 0;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question {
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .back-home:hover {
+      color: var(--accent);
+    }
+
+    .back-home i {
+      margin-right: 0.5rem;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Catalyst<span>Consulting</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#process">Our Process</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#gallery">Portfolio</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Pricing Hero -->
+  <section class="pricing-hero">
+    <div class="container">
+      <h1>Investment Plans</h1>
+      <p>Transparent pricing options designed to fit businesses of all sizes. Choose the plan that works best for your
+        needs.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing">
+    <div class="container">
+      <div class="pricing-container">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Website Creation</div>
+            <div class="pricing-price">$500 - $3,000</div>
+            <div class="pricing-duration">One-time project</div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Custom website design</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Mobile responsive layout</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Logo design & brand guidelines</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Content strategy</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Basic SEO setup</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Process Automation</div>
+            <div class="pricing-price">$250 - $1,500</div>
+            <div class="pricing-duration">One-time project</div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">CRM implementation</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Booking & scheduling systems</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Email marketing automation</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Payment processing</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">AI chatbot integration</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Branding </div>
+            <div class="pricing-price">$300 - $1,500</div>
+            <div class="pricing-duration">One-time project</div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Logo design & variations</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Color palette development</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Typography selection</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Brand voice & messaging</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Brand style guide</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Monthly Retainer</div>
+            <div class="pricing-price">$500 - $2,000</div>
+            <div class="pricing-duration">Per month</div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Website maintenance</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Content updates</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Performance analysis</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Strategy refinement</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Priority support</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Product Management</div>
+            <div class="pricing-price">$750 - $3,500</div>
+            <div class="pricing-duration">Per project</div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Product strategy development</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Market research & analysis</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Feature prioritization</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Product roadmap creation</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Launch strategy</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Social Media Management</div>
+            <div class="pricing-price">$400 - $1,800</div>
+            <div class="pricing-duration">Per month</div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Content calendar creation</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Post creation & scheduling</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Community engagement</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Performance analytics</div>
+            </div>
+            <div class="pricing-feature">
+              <i class="fas fa-check"></i>
+              <div class="pricing-feature-text">Strategy adjustments</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            How do you determine the exact price within each range?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Our pricing is based on the complexity and scope of your specific project. We'll assess factors such as
+              your business size, current situation, project requirements, and timeline to provide you with a precise
+              quote within the listed ranges.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer discounts for bundled services?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We offer package discounts when you combine multiple services. For example, combining Website
+              Creation with Brand Identity typically results in a 10-15% savings compared to purchasing them separately.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            What's your payment structure?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>For one-time projects, we typically require a 50% deposit to begin work with the remaining balance due
+              upon completion. For monthly retainers, we bill at the beginning of each month. We accept all major credit
+              cards, bank transfers, and PayPal.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer a satisfaction guarantee?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! Your satisfaction is our top priority. We work closely with you throughout the project to
+              ensure we're meeting your expectations. If you're not completely satisfied, we'll make necessary revisions
+              until you're happy with the outcome.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>About Us</h3>
+          <p>Catalyst Consulting helps small businesses thrive through strategic solutions, digital transformation, and
+            creative branding.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Website Creation</a></li>
+            <li><a href="index.html#services">Process Automation</a></li>
+            <li><a href="index.html#services">Brand Identity</a></li>
+            <li><a href="index.html#services">Growth Optimization</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#process">Our Process</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for the latest small business tips and insights.</p>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Catalyst Consulting. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // FAQ toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+        // Update chevron icon
+        const icon = question.querySelector('i');
+        if (item.classList.contains('active')) {
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      });
+    });
+
+    // Form submission handling
+    const newsletterForm = document.getElementById('newsletterForm');
+
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for subscribing to our newsletter!');
+      newsletterForm.reset();
+    });
+  </script>
+</body>
+
+</html>
