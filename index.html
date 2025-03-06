@@ -6,21 +6,42 @@
   <title>Catalyst Consulting | Small Business Solutions</title>
   <link rel="stylesheet" href="style.css">
   <script>
-    // Dynamically set the base URL based on the current domain
-    (function() {
-      // Check if we're on GitHub Pages
-      if (window.location.hostname.includes('github.io')) {
-        // Create a base element for GitHub Pages
-        var base = document.createElement('base');
-        base.href = '/ConsultingWebsite/';
-        document.head.appendChild(base);
+    // Detect which environment we're in and load the appropriate CSS
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the current hostname
+      var isGitHub = window.location.hostname.includes('github.io');
+
+      // Create link element for the stylesheet
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+
+      // Set the appropriate path based on the environment
+      if (isGitHub) {
+        link.href = '/ConsultingWebsite/style.css';
+
+        // Fix all image sources for GitHub
+        document.querySelectorAll('img').forEach(function(img) {
+          var src = img.getAttribute('src');
+          if (src && src.startsWith('/assets/')) {
+            img.src = '/ConsultingWebsite' + src;
+          }
+        });
+
+        // Fix video sources for GitHub
+        document.querySelectorAll('video source').forEach(function(source) {
+          var src = source.getAttribute('src');
+          if (src && src.startsWith('/assets/')) {
+            source.src = '/ConsultingWebsite' + src;
+          }
+        });
       } else {
-        // Create a base element for Replit or local development
-        var base = document.createElement('base');
-        base.href = '/';
-        document.head.appendChild(base);
+        // For Replit
+        link.href = '/style.css';
       }
-    })();
+
+      // Add the stylesheet to the document
+      document.head.appendChild(link);
+    });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
