@@ -4,7 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalyst Consulting | Small Business Solutions</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Dynamically set the base URL based on the current domain
+    (function() {
+      // Check if we're on GitHub Pages
+      if (window.location.hostname.includes('github.io')) {
+        // Create a base element for GitHub Pages
+        var base = document.createElement('base');
+        base.href = '/ConsultingWebsite/';
+        document.head.appendChild(base);
+      } else {
+        // Create a base element for Replit or local development
+        var base = document.createElement('base');
+        base.href = '/';
+        document.head.appendChild(base);
+      }
+    })();
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
